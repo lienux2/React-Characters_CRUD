@@ -16,7 +16,7 @@ export function CharacterDescription({ onDescription }: DescriptionProps) {
     return (
         <>
             <label htmlFor="description">Add character description</label>
-            <textarea name="description" id="description" value={typedDescription} onChange={handleTypeDescription}></textarea>
+            <textarea name="description" required id="description" value={typedDescription} onChange={handleTypeDescription}></textarea>
         </>
     )
 }

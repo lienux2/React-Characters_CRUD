@@ -16,7 +16,7 @@ export function CharacterName({ onCharacterName }: CharacterNameProps) {
     return (
         <>
             <label htmlFor="name">Enter character's name:</label>
-            <input type="text" name="name" id="name" value={selectedCharacterName} onChange={handleCharacterName} placeholder="Character Name..." />
+            <input type="text" name="name" required id="name" value={selectedCharacterName} onChange={handleCharacterName} placeholder="Character Name..." />
         </>
     )
 }

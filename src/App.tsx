@@ -9,7 +9,7 @@ interface Character {
   name: string;
   race: string;
   age: string;
-  characterClass: string,
+  charClass: string,
   description: string;
 }
 
@@ -17,41 +17,55 @@ function App() {
   const [characters, setCharacters] = useState<Character[]>([]);
 
   useEffect(() => {
-    const result = axios.get('http://localhost:3004/characters')
-    result.then(response => setCharacters(response.data))
-  }, [])
+    axios.get('http://localhost:3001/characters')
+      .then(response => {
+        const charactersData = response.data.characters;
+        setCharacters(charactersData);
+      });
+  }, []);
 
   const addCharacter = (character: Character) => {
-
-    axios.post('http://localhost:3004/characters', character)
+    axios.post('http://localhost:3001/character', character)
       .then(response => {
-        setCharacters((currentCharacters) => [...currentCharacters, response.data]);
+        const newCharacter = response.data.characters;
+        setCharacters((currentCharacters) => [...currentCharacters, newCharacter]);
       });
-
   };
 
   const deleteCharacter = (id: number) => {
-    axios.delete(`http://localhost:3004/characters/${id}`)
+    axios.delete(`http://localhost:3001/characters/${id}`)
       .then(() => {
         const updatedCharacters = characters.filter(character => character.id !== id);
         setCharacters(updatedCharacters);
       })
   };
 
+  const editCharacter = (id: number, updatedCharacter: Partial<Character>) => {
+    axios.put(`http://localhost:3001/characters/${id}`, updatedCharacter)
+      .then(() => {
+        const updatedCharacters = characters.map(character => 
+          character.id === id ? { ...character, ...updatedCharacter } : character
+        );
+        setCharacters(updatedCharacters);
+      });
+  };
+
   return (
     <>
       <div className='card-wrapper'>
-        {characters.map((character) => (
-          <Characters
-            key={character.id}
-            character={character}
-            onDeleteCharacter={deleteCharacter}
-          />
-        ))}
-      </div>
+  {characters && characters.map((character) => (
+    <Characters
+      key={character.id}
+      character={character}
+      onDeleteCharacter={deleteCharacter}
+      onEditCharacter={editCharacter}
+    />
+  ))}
+</div>
 
       <div className='characters-form'>
-        <CharacterForm onAddCharacter={addCharacter} />
+        <CharacterForm 
+        onAddCharacter={addCharacter} />
       </div>
     </>
   );

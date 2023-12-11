@@ -6,36 +6,41 @@ import { ClassSelection } from "./ClassSelection";
 import { RaceSelection } from "./RaceSelection";
 
 interface NewFormProps {
-    onAddCharacter: (character: {
-        name: string;
-        race: string;
-        age: string;
-        characterClass: string;
-        description: string;
-    }) => void;
+    onAddCharacter: (character: Character) => void;
 };
+
+interface Character {
+    name: string;
+    race: string;
+    age: string;
+    charClass: string;
+    description: string;
+}
 
 export function CharacterForm({ onAddCharacter }: NewFormProps) {
 
     const [characterName, setCharacterName] = useState<string>('');
     const [race, setRace] = useState<string>('');
     const [age, setAge] = useState<string>('');
-    const [characterClass, setCharacterClass] = useState<string>('');
+    const [charClass, setCharClass] = useState<string>('');
     const [description, setDescription] = useState<string>('');
 
-    const handleAddCharacter = (e) => {
-        e.preventDefault();
+    const handleAddCharacter = () => {
 
-        if (characterName.trim() !== '' && race.trim() !== '' && age.trim() !== '' && characterClass.trim() !== '' && description.trim() !== '') {
+        if (characterName.trim() !== '' && race.trim() !== '' && age.trim() !== '' && charClass.trim() !== '' && description.trim() !== '') {
             onAddCharacter({
                 name: characterName, 
                 race: race, 
                 age: age, 
-                characterClass: characterClass, 
+                charClass: charClass, 
                 description: description
             });
 
-            e.target.reset();
+            setCharacterName('');
+            setRace('');
+            setAge('');
+            setCharClass('');
+            setDescription('');
         }
     }
 
@@ -53,7 +58,7 @@ export function CharacterForm({ onAddCharacter }: NewFormProps) {
                     <CharacterAge onSelectAge={setAge} />
                 </div>
                 <div className='form__group'>
-                    <ClassSelection onSelectClass={setCharacterClass} />
+                    <ClassSelection onSelectClass={setCharClass} />
                 </div>
                 <div className='form__group'>
                     <CharacterDescription onDescription={setDescription} />

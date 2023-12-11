@@ -15,9 +15,9 @@ export function ClassSelection({ onSelectClass }: ClassSelectionProps) {
     const [selectedClass, setSelectedClass] = useState<string>('');
 
     const handleSelectClass = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const characterClass = e.target.value;
-        setSelectedClass(characterClass);
-        onSelectClass(characterClass);
+        const charClass = e.target.value;
+        setSelectedClass(charClass);
+        onSelectClass(charClass);
     };
 
     return (

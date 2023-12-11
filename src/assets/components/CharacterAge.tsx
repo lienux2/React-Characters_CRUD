@@ -16,7 +16,7 @@ export function CharacterAge({ onSelectAge }: CharacterAgeProps) {
     return (
         <>
             <label htmlFor="age">Enter your age:</label>
-            <input type="number" name="age" id="age" value={selectedAge} onChange={handleSelectAge} />
+            <input type="number" name="age" id="age" required value={selectedAge} onChange={handleSelectAge} />
         </>
     )
 }

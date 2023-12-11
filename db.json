@@ -4,7 +4,7 @@
       "name": "Aric Shadow",
       "race": "nightElf",
       "age": "134",
-      "characterClass": "rogue",
+      "charClass": "rogue",
       "description": "Aric, a stealthy Night Elf rogue, moves through the shadows with grace and precision. His keen senses and mastery of the art of stealth make him a formidable adversary. With silver hair and piercing green eyes, Aric is known for his agility and quick reflexes. He carries twin daggers with elven runes, and his silent footsteps make him a ghost in the night. Despite his mysterious demeanor, Aric is driven by a sense of justice and a commitment to protect his homeland.",
       "id": 5
     },
@@ -12,7 +12,7 @@
       "name": "Elinor Iron",
       "race": "dwarf",
       "age": "147",
-      "characterClass": "warrior",
+      "charClass": "warrior",
       "description": "Elinor Ironforge, a seasoned dwarf warrior with a long, braided beard and a sturdy frame, is known for her unmatched strength on the battlefield. Clad in robust plate armor, she wields a massive warhammer that has seen countless conflicts. Elinor's keen sense of honor and loyalty to her kin make her a respected leader among her fellow dwarves. Despite her gruff exterior, she harbors a deep appreciation for ale and tales of epic battles, often sharing them by the warmth of a roaring hearth in her mountain stronghold.",
       "id": 6
     },
@@ -20,7 +20,7 @@
       "name": "Teddy Brigg",
       "race": "human",
       "age": "20",
-      "characterClass": "hunter",
+      "charClass": "hunter",
       "description": "Young hunter with great potential, Teddy, possesses an innate connection to the wild that belies his tender years. With sun-kissed hair that mirrors the golden hues of the plains he calls home, and sharp emerald eyes that keenly observe the natural world, Teddy is a beacon of curiosity and untamed spirit. Raised in the traditions of his people, the young human has already displayed remarkable proficiency with the bow and an instinctual understanding of the creatures he shares his homeland with.",
       "id": 8
     }

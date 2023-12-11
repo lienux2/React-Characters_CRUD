@@ -16,7 +16,7 @@ export function RaceSelection({ onSelectRace }: RaceSelectionProps) {
   return (
     <>
       <label htmlFor="race">Choose race:</label>
-      <select name="race" id="race" value={selectedRace} onChange={handleSelectRace}>
+      <select required name="race" id="race" value={selectedRace} onChange={handleSelectRace}>
         <option value="" disabled>Select your race:</option>
         <option value="human">Human</option>
         <option value="dwarf">Dwarf</option>

@@ -157,3 +157,47 @@ body {
   border: 1px solid red;
   font-family: 'Playpen Sans', cursive;
 }
+
+.character-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+
+  & button {
+    background-color: green;
+    color: aliceblue;
+    padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  }
+
+  & input {
+    height: 50px;
+    border: none;
+    font-family: 'Playpen Sans', cursive;
+  }
+
+  & .description {
+    height: 150px;
+    white-space: wrap; 
+    word-wrap: break-word;
+    font-family: 'Playpen Sans', cursive;
+    border: none;
+  }
+}
+
+.character-edit-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.classImage {
+  width: 25px;
+  border-radius: 20%;
+}
