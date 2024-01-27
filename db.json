@@ -53,6 +53,15 @@
       "age": "28",
       "charClass": "Mage",
       "description": "Gideon is an energetic Human sorcerer who wields the power of storms with a flair for dramatic spells. "
+    },
+    {
+      "id": "cff0",
+      "name": "Test",
+      "surname": "Test",
+      "race": "Human",
+      "age": "12",
+      "charClass": "Priest",
+      "description": "This is test"
     }
   ]
 }

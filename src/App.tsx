@@ -24,12 +24,14 @@ function App() {
     });
   }, []);
 
-  const addCharacter = (newCharacter:  {name: string,
-    surname: string,
-    race: string,
-    age: string,
-    charClass: string,
-    description: string,}) => {
+  const addCharacter = (newCharacter: {
+    name: string;
+    surname: string;
+    race: string;
+    age: string;
+    charClass: string;
+    description: string;
+  }) => {
     axios
       .post("http://localhost:3000/characters", newCharacter)
       .then((response) => {
@@ -69,7 +71,7 @@ function App() {
         <div className="form">
           <h1>Add new Character!</h1>
           {/* @ts-ignore */}
-          <CharacterForm onAddCharacter={addCharacter}/>
+          <CharacterForm onAddCharacter={addCharacter} />
         </div>
         <div className="content">
           <h1 className="content-title">All Characters</h1>
@@ -77,7 +79,7 @@ function App() {
           <div className="card-container">
             {characters.map((character) => (
               <CharacterCard
-              key={character.id}
+                key={character.id}
                 characters={character}
                 onDeleteCharacter={deleteCharacter}
                 onEditCharacter={editCharacter}

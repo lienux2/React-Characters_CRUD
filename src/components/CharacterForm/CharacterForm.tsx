@@ -10,20 +10,17 @@ import { CharacterRace } from "./FormInputs/CharacterRace/CharacterRace";
 
 interface CharacterProps {
   character: {
-      name: string;
-      surname: string;
-      race: string;
-      age: string;
-      charClass: string;
-      description: string;
+    name: string;
+    surname: string;
+    race: string;
+    age: string;
+    charClass: string;
+    description: string;
   };
   onAddCharacter: (newCharacter: CharacterProps) => void;
-};
+}
 
-export default function CharacterForm({
-  onAddCharacter,
-}: CharacterProps) {
-
+export default function CharacterForm({ onAddCharacter }: CharacterProps) {
   const [characterName, setCharacterName] = useState<string>("");
   const [race, setRace] = useState<string>("");
   const [age, setAge] = useState<string>("");
@@ -37,17 +34,17 @@ export default function CharacterForm({
       race.trim() !== "" &&
       age.trim() !== "" &&
       charClass.trim() !== "" &&
-      description.trim() !== "" && 
+      description.trim() !== "" &&
       surname.trim() !== ""
     ) {
-      const newCharacter = ({
+      const newCharacter = {
         name: characterName,
         surname: surname,
         race: race,
         age: age,
         charClass: charClass,
         description: description,
-      });
+      };
       // @ts-ignore
       onAddCharacter(newCharacter);
     }
@@ -95,7 +92,12 @@ export default function CharacterForm({
         <CharacterDescription onDescription={setDescription} />
       </div>
 
-      <Button buttonType="submit" buttonStyle="create" buttonName="Add" click={handleAddCharacter}/>
+      <Button
+        buttonType="submit"
+        buttonStyle="create"
+        buttonName="Add"
+        click={handleAddCharacter}
+      />
     </form>
   );
 }

@@ -1,32 +1,32 @@
 .button {
-    padding: 10px 20px 8px 20px;
-    font-size: 20px;
-    border: transparent;
-    border-radius: 6px;
-    min-width: 100px;
+  padding: 10px 20px 8px 20px;
+  font-size: 20px;
+  border: transparent;
+  border-radius: 6px;
+  min-width: 100px;
 }
 
 .create {
-    background-color: darkgreen;
-    color: azure;
+  background-color: darkgreen;
+  color: azure;
 }
 
 .cancel {
-    background-color: gold;
-    color: black;
+  background-color: gold;
+  color: black;
 }
 
 .edit {
-    background-color: cornflowerblue;
-    color: azure;
+  background-color: cornflowerblue;
+  color: azure;
 }
 
 .delete {
-    background-color: crimson;
-    color: azure;
+  background-color: crimson;
+  color: azure;
 }
 
 .save {
-    background-color: darkolivegreen;
-    color: azure;
+  background-color: darkolivegreen;
+  color: azure;
 }

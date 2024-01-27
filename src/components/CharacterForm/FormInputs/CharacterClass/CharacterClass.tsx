@@ -100,7 +100,7 @@ export function CharacterClass({ onSelectClass }: ClassSelectionProps) {
         onChange={handleSelectClass}
       />
 
-<label htmlFor="warrior">
+      <label htmlFor="warrior">
         <img
           src={warrior}
           alt="warrior"
