@@ -1,0 +1,33 @@
+.form-label {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.form-input {
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eeedeb;
+}
+
+.class-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.class-image:hover {
+  width: 55px;
+  height: 55px;
+  border: 1px solid blue;
+}
+
+input[type="radio"] {
+  appearance: none;
+}
+
+span {
+    color: blueviolet;
+}
